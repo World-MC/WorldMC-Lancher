@@ -246,7 +246,7 @@ const refreshServerStatus = async (fade = false) => {
 
         const servStat = await getServerStatus(47, serv.hostname, serv.port)
         console.log(servStat)
-        pLabel = Lang.queryJS('landing.serverStatus.players')
+        pLabel = Lang.queryJS('JO')
         pVal = servStat.players.online + '/' + servStat.players.max
 
     } catch (err) {
@@ -736,7 +736,7 @@ let newsLoadingListener = null
  */
 function setNewsLoading(val){
     if(val){
-        const nLStr = Lang.queryJS('landing.news.checking')
+        const nLStr = Lang.queryJS('Vérification des actualitées')
         let dotStr = '..'
         nELoadSpan.innerHTML = nLStr + dotStr
         newsLoadingListener = setInterval(() => {
